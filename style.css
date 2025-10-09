@@ -831,3 +831,312 @@ div.checkbox-container {
   border-radius: 12px !important;
 }
 
+/* ================================== 
+   PAGE SETTINGS / PARAMÈTRES
+   ================================== */
+
+/* Container principal */
+div.setting_container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 140px 20px 100px 20px !important;
+}
+
+/* ============ USER INFO CARD (Group D) ============ */
+
+div.setting_user-card {
+  background: white !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+  margin-bottom: 32px !important;
+}
+
+/* Textes "Vous êtes connecté..." */
+div.setting_user-info,
+div.setting_user-info div {
+  color: #495057 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.6 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Bouton Se déconnecter */
+div.setting_btn-logout button,
+div.setting_btn-logout .bubble-element.Button {
+  background: #dc3545 !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  margin-top: 20px !important;
+}
+
+div.setting_btn-logout button:hover {
+  background: #bb2d3b !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3) !important;
+}
+
+/* ============ SECTION LOGOS ============ */
+
+div.setting_logo-section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+/* Group E - Upload logo */
+div.setting_upload-card {
+  background: white !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+}
+
+div.setting_upload-title,
+div.setting_upload-title div {
+  color: #212529 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* PictureUploader */
+div.setting_upload-zone,
+div.setting_upload-zone .bubble-element.PictureUploader {
+  border: 3px dashed #dee2e6 !important;
+  border-radius: 12px !important;
+  padding: 40px 20px !important;
+  background: #f8f9fa !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 20px !important;
+  min-height: 150px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+div.setting_upload-zone:hover {
+  border-color: #667eea !important;
+  background: #f0f0ff !important;
+}
+
+div.setting_upload-text,
+div.setting_upload-text div {
+  color: #6c757d !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Bouton Enregistrer l'image */
+div.setting_btn-save-logo button,
+div.setting_btn-save-logo .bubble-element.Button {
+  background: #667eea !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  margin-top: 16px !important;
+}
+
+div.setting_btn-save-logo button:hover {
+  background: #5568d3 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Group F - Prévisualisation logo */
+div.setting_logo-preview-card {
+  background: white !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+}
+
+div.setting_logo-preview-title,
+div.setting_logo-preview-title div {
+  color: #212529 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Image B - Preview du logo */
+div.setting_logo-image,
+div.setting_logo-image img {
+  border: 2px solid #e9ecef !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  background: #f8f9fa !important;
+  width: 100% !important;
+  min-height: 200px !important;
+  object-fit: contain !important;
+}
+
+/* ============ SECTION CONTACT ============ */
+
+div.setting_contact-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+/* Group H - Formulaire retour */
+div.setting_feedback-card {
+  background: white !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+}
+
+div.setting_card-title,
+div.setting_card-title div {
+  color: #212529 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Inputs du formulaire */
+div.setting_feedback-input input,
+div.setting_feedback-input .bubble-element.Input input,
+div.setting_feedback-input .bubble-element.MultiLineInput textarea {
+  width: 100% !important;
+  padding: 14px 18px !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 16px !important;
+  background: #f8f9fa !important;
+}
+
+div.setting_feedback-input input:focus,
+div.setting_feedback-input .bubble-element.Input input:focus,
+div.setting_feedback-input .bubble-element.MultiLineInput textarea:focus {
+  border-color: #667eea !important;
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+  background: white !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Bouton Envoyer */
+div.setting_btn-send button,
+div.setting_btn-send .bubble-element.Button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 14px 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+}
+
+div.setting_btn-send button:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Group I - Nous contacter */
+div.setting_contact-card {
+  background: white !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+div.setting_contact-subtitle,
+div.setting_contact-subtitle div {
+  color: #495057 !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  margin-bottom: 16px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Bouton Par téléphone */
+div.setting_btn-phone button,
+div.setting_btn-phone .bubble-element.Button {
+  background: #198754 !important;
+  color: white !important;
+  border: none !important;
+  padding: 16px 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
+}
+
+div.setting_btn-phone button:hover {
+  background: #157347 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3) !important;
+}
+
+/* Bouton Via mail */
+div.setting_btn-email button,
+div.setting_btn-email .bubble-element.Button {
+  background: #0d6efd !important;
+  color: white !important;
+  border: none !important;
+  padding: 16px 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+}
+
+div.setting_btn-email button:hover {
+  background: #0b5ed7 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  div.setting_logo-section {
+    grid-template-columns: 1fr !important;
+  }
+  
+  div.setting_contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
