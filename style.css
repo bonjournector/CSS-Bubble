@@ -1262,6 +1262,7 @@ div.config_answers {
   flex-direction: column !important;
   gap: 16px !important;
   box-sizing: border-box !important;
+  overflow: visible !important;
 }
 
 /* ============ CHECKBOX - OPTION ============ */
@@ -1279,7 +1280,7 @@ div.config_checkbox {
   display: flex !important;
   align-items: center !important;
   box-sizing: border-box !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 div.config_checkbox:hover {
@@ -1307,6 +1308,7 @@ div.config_checkbox .bubble-element.Checkbox {
   background: transparent !important;
   border: none !important;
   box-sizing: border-box !important;
+  overflow: visible !important;
 }
 
 div.config_checkbox input[type="checkbox"] {
@@ -1333,6 +1335,9 @@ div.config_checkbox label {
   line-height: 1.5 !important;
   background: transparent !important;
   border: none !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
 }
 
 /* ============ INPUT TEXTE ============ */
@@ -1394,7 +1399,7 @@ div.config_radio {
   align-items: center !important;
   gap: 16px !important;
   box-sizing: border-box !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   position: relative !important;
 }
 
@@ -1424,6 +1429,7 @@ div.config_radio .bubble-element.RadioButton {
   border: none !important;
   box-sizing: border-box !important;
   position: relative !important;
+  overflow: visible !important;
 }
 
 /* L'input radio lui-même */
@@ -1456,6 +1462,8 @@ div.config_radio label {
   border: none !important;
   white-space: normal !important;
   word-wrap: break-word !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 /* Cacher les éléments Text Bubble qui pourraient dupliquer le label */
