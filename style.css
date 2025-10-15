@@ -1663,3 +1663,28 @@ div.config_btn-skip button:hover {
   }
 }
 
+/* ============ NAVIGATION AU NIVEAU SECTION ============ */
+
+/* Les boutons de nav sont fixés en bas de la section */
+div.config_section {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+div.config_nav-buttons {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: white !important;
+  padding: 24px !important;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1) !important;
+  display: flex !important;
+  gap: 16px !important;
+  z-index: 100 !important;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  border-radius: 24px 24px 0 0 !important;
+}
