@@ -1141,12 +1141,13 @@ div.setting_btn-email button:hover {
 
 /* ================================== 
    CONFIGURATEUR - SYSTÈME DE QUESTIONS
-   Style moderne type Instagram Swipe
+   VERSION ULTRA-PRIORITAIRE POUR OVERRIDE BUBBLE
    ================================== */
 
 /* ============ CONTAINER PRINCIPAL ============ */
 
-div.config_container {
+div.bubble-element.Group.config_container,
+div.config_container.config_container {
   max-width: 100% !important;
   min-height: 100vh !important;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
@@ -1155,11 +1156,13 @@ div.config_container {
   display: flex !important;
   flex-direction: column !important;
   position: relative !important;
+  box-sizing: border-box !important;
 }
 
 /* ============ PROGRESS BAR EN HAUT ============ */
 
-div.config_progress-container {
+div.bubble-element.Group.config_progress-container,
+div.config_progress-container.config_progress-container {
   width: 100% !important;
   height: 8px !important;
   background: rgba(255, 255, 255, 0.3) !important;
@@ -1168,18 +1171,29 @@ div.config_progress-container {
   left: 0 !important;
   z-index: 1000 !important;
   backdrop-filter: blur(10px) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-sizing: border-box !important;
 }
 
-div.config_progress-bar {
+div.bubble-element.ProgressBar.config_progress-bar,
+div.config_progress-bar.config_progress-bar,
+div.config_progress-bar.config_progress-bar > div {
   height: 100% !important;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
   box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Texte du pourcentage (optionnel) */
-div.config_progress-text,
-div.config_progress-text div {
+/* Texte du pourcentage */
+div.bubble-element.Text.config_progress-text,
+div.config_progress-text.config_progress-text,
+div.config_progress-text.config_progress-text div {
   position: fixed !important;
   top: 20px !important;
   right: 20px !important;
@@ -1192,11 +1206,14 @@ div.config_progress-text div {
   border-radius: 20px !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  margin: 0 !important;
+  border: none !important;
 }
 
 /* ============ SECTION (THÈME) ============ */
 
-div.config_section {
+div.bubble-element.Group.config_section,
+div.config_section.config_section {
   width: 100% !important;
   min-height: 100vh !important;
   display: flex !important;
@@ -1204,6 +1221,10 @@ div.config_section {
   justify-content: center !important;
   padding: 80px 20px 120px 20px !important;
   animation: sectionFadeIn 0.6s ease !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
 }
 
 @keyframes sectionFadeIn {
@@ -1219,7 +1240,8 @@ div.config_section {
 
 /* ============ QUESTION CARD ============ */
 
-div.config_question {
+div.bubble-element.Group.config_question,
+div.config_question.config_question {
   background: white !important;
   border-radius: 24px !important;
   padding: 48px !important;
@@ -1229,9 +1251,12 @@ div.config_question {
   animation: questionSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative !important;
   overflow: hidden !important;
+  border: none !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
 }
 
-div.config_question::before {
+div.config_question.config_question::before {
   content: '' !important;
   position: absolute !important;
   top: 0 !important;
@@ -1254,16 +1279,20 @@ div.config_question::before {
 
 /* ============ IMAGE DE LA QUESTION ============ */
 
-div.config_question-image {
+div.bubble-element.Group.config_question-image,
+div.config_question-image.config_question-image {
   width: 100% !important;
   max-height: 300px !important;
   border-radius: 16px !important;
   overflow: hidden !important;
   margin-bottom: 32px !important;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
 }
 
-div.config_question-image img {
+div.config_question-image.config_question-image img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -1271,9 +1300,10 @@ div.config_question-image img {
 
 /* ============ TEXTES DE LA QUESTION ============ */
 
-/* Numéro de la question (optionnel) */
-div.config_question-number,
-div.config_question-number div {
+/* Numéro de la question */
+div.bubble-element.Text.config_question-number,
+div.config_question-number.config_question-number,
+div.config_question-number.config_question-number div {
   color: #667eea !important;
   font-size: 14px !important;
   font-weight: 700 !important;
@@ -1281,39 +1311,68 @@ div.config_question-number div {
   letter-spacing: 1px !important;
   margin-bottom: 16px !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  line-height: 1.5 !important;
 }
 
 /* Titre de la question */
-div.config_question-title,
-div.config_question-title div {
+div.bubble-element.Text.config_question-title,
+div.config_question-title.config_question-title,
+div.config_question-title.config_question-title div {
   color: #212529 !important;
   font-size: 32px !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
   margin-bottom: 16px !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-/* Description / sous-titre */
-div.config_question-description,
-div.config_question-description div {
+/* Description */
+div.bubble-element.Text.config_question-description,
+div.config_question-description.config_question-description,
+div.config_question-description.config_question-description div {
   color: #6c757d !important;
   font-size: 18px !important;
   line-height: 1.6 !important;
   margin-bottom: 32px !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  font-weight: 400 !important;
 }
 
 /* ============ INPUTS / RÉPONSES ============ */
 
 /* Container des réponses */
-div.config_answer-container {
+div.bubble-element.Group.config_answer-container,
+div.config_answer-container.config_answer-container {
   margin: 32px 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Input texte */
-div.config_input input,
-div.config_input .bubble-element.Input input {
+div.bubble-element.Group.config_input,
+div.config_input.config_input {
+  width: 100% !important;
+  margin-bottom: 16px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+div.config_input.config_input input,
+div.config_input.config_input .bubble-element.Input,
+div.config_input.config_input .bubble-element.Input input {
   width: 100% !important;
   padding: 18px 24px !important;
   border: 2px solid #e9ecef !important;
@@ -1322,10 +1381,14 @@ div.config_input .bubble-element.Input input {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   transition: all 0.3s ease !important;
   background: #f8f9fa !important;
+  color: #212529 !important;
+  box-sizing: border-box !important;
+  line-height: 1.5 !important;
+  min-height: 56px !important;
 }
 
-div.config_input input:focus,
-div.config_input .bubble-element.Input input:focus {
+div.config_input.config_input input:focus,
+div.config_input.config_input .bubble-element.Input input:focus {
   border-color: #667eea !important;
   outline: none !important;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
@@ -1334,8 +1397,18 @@ div.config_input .bubble-element.Input input:focus {
 }
 
 /* Textarea */
-div.config_textarea textarea,
-div.config_textarea .bubble-element.MultiLineInput textarea {
+div.bubble-element.Group.config_textarea,
+div.config_textarea.config_textarea {
+  width: 100% !important;
+  margin-bottom: 16px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+div.config_textarea.config_textarea textarea,
+div.config_textarea.config_textarea .bubble-element.MultiLineInput,
+div.config_textarea.config_textarea .bubble-element.MultiLineInput textarea {
   width: 100% !important;
   padding: 18px 24px !important;
   border: 2px solid #e9ecef !important;
@@ -1346,18 +1419,23 @@ div.config_textarea .bubble-element.MultiLineInput textarea {
   background: #f8f9fa !important;
   min-height: 150px !important;
   resize: vertical !important;
+  color: #212529 !important;
+  box-sizing: border-box !important;
+  line-height: 1.5 !important;
 }
 
-div.config_textarea textarea:focus {
+div.config_textarea.config_textarea textarea:focus {
   border-color: #667eea !important;
   outline: none !important;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
   background: white !important;
 }
 
-/* ============ RADIO BUTTONS / CHOIX MULTIPLES ============ */
+/* ============ CHECKBOXES - ULTRA PRIORITAIRE ============ */
 
-div.config_radio-option {
+div.bubble-element.Group.config_checkbox-option,
+div.config_checkbox-option.config_checkbox-option,
+div.config_answer-container div.config_checkbox-option {
   background: #f8f9fa !important;
   border: 3px solid #e9ecef !important;
   border-radius: 16px !important;
@@ -1368,41 +1446,66 @@ div.config_radio-option {
   display: flex !important;
   align-items: center !important;
   gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  min-height: 64px !important;
+  position: relative !important;
 }
 
-div.config_radio-option:hover {
+div.config_checkbox-option.config_checkbox-option:hover,
+div.bubble-element.Group.config_checkbox-option:hover {
   border-color: #667eea !important;
   background: white !important;
   transform: translateX(8px) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15) !important;
 }
 
-div.config_radio-option:has(input:checked) {
+/* Checkbox cochée */
+div.config_checkbox-option.config_checkbox-option:has(input:checked),
+div.bubble-element.Group.config_checkbox-option:has(input:checked),
+div.config_checkbox-option.config_checkbox-option:has(.bubble-element.Checkbox input:checked) {
   border-color: #667eea !important;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2) !important;
 }
 
-div.config_radio-option input[type="radio"] {
+/* Input checkbox */
+div.config_checkbox-option.config_checkbox-option input[type="checkbox"],
+div.config_checkbox-option.config_checkbox-option .bubble-element.Checkbox,
+div.config_checkbox-option.config_checkbox-option .bubble-element.Checkbox input {
   transform: scale(1.5) !important;
   cursor: pointer !important;
   accent-color: #667eea !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  flex-shrink: 0 !important;
 }
 
-div.config_radio-option label,
-div.config_radio-option .bubble-element.Text,
-div.config_radio-option .bubble-element.Text div {
+/* Label / Texte */
+div.config_checkbox-option.config_checkbox-option label,
+div.config_checkbox-option.config_checkbox-option .bubble-element.Text,
+div.config_checkbox-option.config_checkbox-option .bubble-element.Text div,
+div.config_checkbox-option.config_checkbox-option > div {
   color: #212529 !important;
   font-size: 18px !important;
   font-weight: 500 !important;
   cursor: pointer !important;
   flex: 1 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  line-height: 1.5 !important;
 }
 
-/* ============ CHECKBOXES ============ */
+/* ============ RADIO BUTTONS ============ */
 
-div.config_checkbox-option {
+div.bubble-element.Group.config_radio-option,
+div.config_radio-option.config_radio-option,
+div.config_answer-container div.config_radio-option {
   background: #f8f9fa !important;
   border: 3px solid #e9ecef !important;
   border-radius: 16px !important;
@@ -1413,30 +1516,36 @@ div.config_checkbox-option {
   display: flex !important;
   align-items: center !important;
   gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  min-height: 64px !important;
 }
 
-div.config_checkbox-option:hover {
+div.config_radio-option.config_radio-option:hover {
   border-color: #667eea !important;
   background: white !important;
   transform: translateX(8px) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15) !important;
 }
 
-div.config_checkbox-option:has(input:checked) {
+div.config_radio-option.config_radio-option:has(input:checked) {
   border-color: #667eea !important;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2) !important;
 }
 
-div.config_checkbox-option input[type="checkbox"] {
+div.config_radio-option.config_radio-option input[type="radio"] {
   transform: scale(1.5) !important;
   cursor: pointer !important;
   accent-color: #667eea !important;
+  margin: 0 !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
 }
 
-div.config_checkbox-option label,
-div.config_checkbox-option .bubble-element.Text,
-div.config_checkbox-option .bubble-element.Text div {
+div.config_radio-option.config_radio-option label,
+div.config_radio-option.config_radio-option .bubble-element.Text,
+div.config_radio-option.config_radio-option .bubble-element.Text div {
   color: #212529 !important;
   font-size: 18px !important;
   font-weight: 500 !important;
@@ -1445,10 +1554,17 @@ div.config_checkbox-option .bubble-element.Text div {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* ============ DROPDOWN / SELECT ============ */
+/* ============ DROPDOWN ============ */
 
-div.config_dropdown select,
-div.config_dropdown .bubble-element.Dropdown select {
+div.bubble-element.Group.config_dropdown,
+div.config_dropdown.config_dropdown {
+  width: 100% !important;
+  margin-bottom: 16px !important;
+}
+
+div.config_dropdown.config_dropdown select,
+div.config_dropdown.config_dropdown .bubble-element.Dropdown,
+div.config_dropdown.config_dropdown .bubble-element.Dropdown select {
   width: 100% !important;
   padding: 18px 24px !important;
   border: 2px solid #e9ecef !important;
@@ -1458,74 +1574,11 @@ div.config_dropdown .bubble-element.Dropdown select {
   transition: all 0.3s ease !important;
   background: #f8f9fa !important;
   cursor: pointer !important;
+  color: #212529 !important;
+  box-sizing: border-box !important;
 }
 
-div.config_dropdown select:focus {
-  border-color: #667eea !important;
-  outline: none !important;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
-  background: white !important;
-}
-
-/* ============ SLIDER / RANGE ============ */
-
-div.config_slider {
-  padding: 20px 0 !important;
-}
-
-div.config_slider input[type="range"],
-div.config_slider .bubble-element.RangeSlider input {
-  width: 100% !important;
-  height: 8px !important;
-  border-radius: 10px !important;
-  background: #e9ecef !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
-div.config_slider input[type="range"]::-webkit-slider-thumb {
-  appearance: none !important;
-  width: 24px !important;
-  height: 24px !important;
-  border-radius: 50% !important;
-  background: #667eea !important;
-  cursor: pointer !important;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4) !important;
-  transition: all 0.3s ease !important;
-}
-
-div.config_slider input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2) !important;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6) !important;
-}
-
-/* Valeur du slider */
-div.config_slider-value,
-div.config_slider-value div {
-  color: #667eea !important;
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  text-align: center !important;
-  margin-top: 16px !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-}
-
-/* ============ DATE PICKER ============ */
-
-div.config_date input[type="date"],
-div.config_date .bubble-element.DateTimePicker input {
-  width: 100% !important;
-  padding: 18px 24px !important;
-  border: 2px solid #e9ecef !important;
-  border-radius: 12px !important;
-  font-size: 18px !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  transition: all 0.3s ease !important;
-  background: #f8f9fa !important;
-  cursor: pointer !important;
-}
-
-div.config_date input:focus {
+div.config_dropdown.config_dropdown select:focus {
   border-color: #667eea !important;
   outline: none !important;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
@@ -1534,17 +1587,22 @@ div.config_date input:focus {
 
 /* ============ BOUTONS DE NAVIGATION ============ */
 
-div.config_nav-buttons {
+div.bubble-element.Group.config_nav-buttons,
+div.config_nav-buttons.config_nav-buttons {
   display: flex !important;
   gap: 16px !important;
   margin-top: 40px !important;
   padding-top: 32px !important;
   border-top: 2px solid #f1f3f5 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Bouton Précédent */
-div.config_btn-previous button,
-div.config_btn-previous .bubble-element.Button {
+div.bubble-element.Button.config_btn-previous,
+div.config_btn-previous.config_btn-previous,
+div.config_btn-previous.config_btn-previous button,
+div.config_btn-previous.config_btn-previous .bubble-element.Button {
   background: white !important;
   color: #6c757d !important;
   border: 2px solid #e9ecef !important;
@@ -1555,9 +1613,13 @@ div.config_btn-previous .bubble-element.Button {
   transition: all 0.3s ease !important;
   cursor: pointer !important;
   flex: 1 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  min-height: 56px !important;
+  box-sizing: border-box !important;
 }
 
-div.config_btn-previous button:hover {
+div.config_btn-previous.config_btn-previous:hover button,
+div.config_btn-previous.config_btn-previous button:hover {
   border-color: #6c757d !important;
   color: #495057 !important;
   transform: translateY(-2px) !important;
@@ -1565,8 +1627,10 @@ div.config_btn-previous button:hover {
 }
 
 /* Bouton Suivant */
-div.config_btn-next button,
-div.config_btn-next .bubble-element.Button {
+div.bubble-element.Button.config_btn-next,
+div.config_btn-next.config_btn-next,
+div.config_btn-next.config_btn-next button,
+div.config_btn-next.config_btn-next .bubble-element.Button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   color: white !important;
   border: none !important;
@@ -1578,16 +1642,22 @@ div.config_btn-next .bubble-element.Button {
   cursor: pointer !important;
   flex: 2 !important;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  min-height: 56px !important;
+  box-sizing: border-box !important;
 }
 
-div.config_btn-next button:hover {
+div.config_btn-next.config_btn-next:hover button,
+div.config_btn-next.config_btn-next button:hover {
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
 }
 
 /* Bouton Terminer */
-div.config_btn-finish button,
-div.config_btn-finish .bubble-element.Button {
+div.bubble-element.Button.config_btn-finish,
+div.config_btn-finish.config_btn-finish,
+div.config_btn-finish.config_btn-finish button,
+div.config_btn-finish.config_btn-finish .bubble-element.Button {
   background: #198754 !important;
   color: white !important;
   border: none !important;
@@ -1599,18 +1669,22 @@ div.config_btn-finish .bubble-element.Button {
   cursor: pointer !important;
   flex: 2 !important;
   box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  min-height: 56px !important;
+  box-sizing: border-box !important;
 }
 
-div.config_btn-finish button:hover {
+div.config_btn-finish.config_btn-finish:hover button,
+div.config_btn-finish.config_btn-finish button:hover {
   background: #157347 !important;
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 0 6px 20px rgba(25, 135, 84, 0.4) !important;
 }
 
-/* ============ BOUTON PASSER / SKIP ============ */
-
-div.config_btn-skip button,
-div.config_btn-skip .bubble-element.Button {
+/* Bouton Skip */
+div.bubble-element.Button.config_btn-skip,
+div.config_btn-skip.config_btn-skip,
+div.config_btn-skip.config_btn-skip button {
   background: transparent !important;
   color: #6c757d !important;
   border: none !important;
@@ -1621,9 +1695,10 @@ div.config_btn-skip .bubble-element.Button {
   transition: all 0.3s ease !important;
   cursor: pointer !important;
   text-decoration: underline !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-div.config_btn-skip button:hover {
+div.config_btn-skip.config_btn-skip:hover button {
   color: #495057 !important;
   background: #f8f9fa !important;
 }
@@ -1631,28 +1706,28 @@ div.config_btn-skip button:hover {
 /* ============ RESPONSIVE ============ */
 
 @media (max-width: 768px) {
-  div.config_question {
+  div.config_question.config_question {
     padding: 32px 24px !important;
     border-radius: 16px !important;
   }
   
-  div.config_question-title,
-  div.config_question-title div {
+  div.config_question-title.config_question-title,
+  div.config_question-title.config_question-title div {
     font-size: 24px !important;
   }
   
-  div.config_question-description,
-  div.config_question-description div {
+  div.config_question-description.config_question-description,
+  div.config_question-description.config_question-description div {
     font-size: 16px !important;
   }
   
-  div.config_input input,
-  div.config_radio-option label,
-  div.config_checkbox-option label {
+  div.config_input.config_input input,
+  div.config_radio-option.config_radio-option label,
+  div.config_checkbox-option.config_checkbox-option label {
     font-size: 16px !important;
   }
   
-  div.config_nav-buttons {
+  div.config_nav-buttons.config_nav-buttons {
     flex-direction: column !important;
   }
   
@@ -1660,31 +1735,6 @@ div.config_btn-skip button:hover {
   div.config_btn-next,
   div.config_btn-finish {
     flex: 1 !important;
+    width: 100% !important;
   }
-}
-
-/* ============ NAVIGATION AU NIVEAU SECTION ============ */
-
-/* Les boutons de nav sont fixés en bas de la section */
-div.config_section {
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-}
-
-div.config_nav-buttons {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  background: white !important;
-  padding: 24px !important;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.1) !important;
-  display: flex !important;
-  gap: 16px !important;
-  z-index: 100 !important;
-  max-width: 700px !important;
-  margin: 0 auto !important;
-  border-radius: 24px 24px 0 0 !important;
 }
