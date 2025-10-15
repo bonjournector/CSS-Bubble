@@ -1511,3 +1511,63 @@ div.config_btn-next button:hover {
     min-height: 48px !important;
   }
 }
+/* ============ INPUT TEXTE ============ */
+
+div.config_input {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+div.config_input .bubble-element.Input,
+div.config_input input {
+  width: 100% !important;
+  padding: 18px 24px !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 12px !important;
+  font-size: 18px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  background: #f8f9fa !important;
+  color: #212529 !important;
+  transition: all 0.3s ease !important;
+  box-sizing: border-box !important;
+  line-height: 1.5 !important;
+}
+
+div.config_input input::placeholder {
+  color: #adb5bd !important;
+  font-weight: 400 !important;
+}
+
+div.config_input input:focus,
+div.config_input .bubble-element.Input:focus {
+  border-color: #667eea !important;
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+  background: white !important;
+  transform: translateY(-2px) !important;
+}
+
+div.config_input input:hover {
+  border-color: #dee2e6 !important;
+  background: white !important;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  div.config_input .bubble-element.Input,
+  div.config_input input {
+    padding: 16px 20px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  div.config_input .bubble-element.Input,
+  div.config_input input {
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+  }
+}
