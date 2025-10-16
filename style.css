@@ -1139,8 +1139,8 @@ div.setting_btn-email button:hover {
   }
 }
 /* ================================== 
-   CONFIGURATEUR - VERSION MINIMALISTE
-   CSS simple et propre pour les bases
+   CONFIGURATEUR - VERSION 2
+   CSS avec fix pour RadioButtons
    ================================== */
 
 /* ============ CONTAINER PRINCIPAL ============ */
@@ -1385,7 +1385,30 @@ div.config_input input:hover {
 
 /* ============ RADIO BUTTONS ============ */
 
+/* Le Group wrapper - juste un container transparent */
 div.config_radio {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* L'élément RadioButtons natif de Bubble */
+div.config_radio .bubble-element.RadioButtons {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+/* CHAQUE LIGNE (option) générée par RadioButtons - ciblage universel */
+div.config_radio .bubble-element.RadioButtons > *,
+div.config_radio .bubble-element.RadioButtons label,
+div.config_radio .bubble-element.RadioButtons > div {
   background: #f8f9fa !important;
   border: 3px solid #e9ecef !important;
   border-radius: 16px !important;
@@ -1399,41 +1422,34 @@ div.config_radio {
   align-items: center !important;
   gap: 16px !important;
   box-sizing: border-box !important;
-  overflow: visible !important;
-  position: relative !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #212529 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  line-height: 1.5 !important;
 }
 
-div.config_radio:hover {
+/* Hover sur chaque ligne */
+div.config_radio .bubble-element.RadioButtons > *:hover,
+div.config_radio .bubble-element.RadioButtons label:hover,
+div.config_radio .bubble-element.RadioButtons > div:hover {
   border-color: #667eea !important;
   background: white !important;
   transform: translateX(8px) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15) !important;
 }
 
-div.config_radio:has(input[type="radio"]:checked) {
+/* Ligne sélectionnée (avec radio coché) */
+div.config_radio .bubble-element.RadioButtons > *:has(input:checked),
+div.config_radio .bubble-element.RadioButtons label:has(input:checked),
+div.config_radio .bubble-element.RadioButtons > div:has(input:checked) {
   border-color: #667eea !important;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2) !important;
 }
 
-/* Le radio button Bubble lui-même */
-div.config_radio .bubble-element.RadioButton {
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 16px !important;
-  background: transparent !important;
-  border: none !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-  overflow: visible !important;
-}
-
-/* L'input radio lui-même */
-div.config_radio input[type="radio"] {
+/* Le bouton radio lui-même */
+div.config_radio .bubble-element.RadioButtons input[type="radio"] {
   width: 24px !important;
   height: 24px !important;
   min-width: 24px !important;
@@ -1443,32 +1459,6 @@ div.config_radio input[type="radio"] {
   accent-color: #667eea !important;
   transform: scale(1.3) !important;
   flex-shrink: 0 !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-/* Le label du radio */
-div.config_radio label {
-  color: #212529 !important;
-  font-size: 18px !important;
-  font-weight: 500 !important;
-  cursor: pointer !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  flex: 1 !important;
-  line-height: 1.5 !important;
-  background: transparent !important;
-  border: none !important;
-  white-space: normal !important;
-  word-wrap: break-word !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
-}
-
-/* Cacher les éléments Text Bubble qui pourraient dupliquer le label */
-div.config_radio .bubble-element.Text {
-  display: none !important;
 }
 
 /* ============ NAVIGATION (Boutons) - AU NIVEAU SECTION ============ */
@@ -1586,24 +1576,18 @@ div.config_btn-next button:hover {
   }
   
   /* Radio mobile */
-  div.config_radio {
+  div.config_radio .bubble-element.RadioButtons > *,
+  div.config_radio .bubble-element.RadioButtons label,
+  div.config_radio .bubble-element.RadioButtons > div {
     min-height: 64px !important;
     border-radius: 12px !important;
     padding: 18px !important;
     gap: 12px !important;
-  }
-  
-  div.config_radio .bubble-element.RadioButton {
-    padding: 0 !important;
-    gap: 12px !important;
-  }
-  
-  div.config_radio input[type="radio"] {
-    transform: scale(1.2) !important;
-  }
-  
-  div.config_radio label {
     font-size: 16px !important;
+  }
+  
+  div.config_radio .bubble-element.RadioButtons input[type="radio"] {
+    transform: scale(1.2) !important;
   }
   
   /* Input mobile */
@@ -1613,7 +1597,7 @@ div.config_btn-next button:hover {
     font-size: 16px !important;
   }
   
-  /* Navigation mobile - GARDER CÔTE À CÔTE */
+  /* Navigation mobile */
   div.config_nav {
     padding: 16px !important;
     gap: 12px !important;
@@ -1680,16 +1664,11 @@ div.config_btn-next button:hover {
   }
   
   /* Radio très petits écrans */
-  div.config_radio {
+  div.config_radio .bubble-element.RadioButtons > *,
+  div.config_radio .bubble-element.RadioButtons label,
+  div.config_radio .bubble-element.RadioButtons > div {
     min-height: 60px !important;
     padding: 16px !important;
-  }
-  
-  div.config_radio .bubble-element.RadioButton {
-    padding: 0 !important;
-  }
-  
-  div.config_radio label {
     font-size: 15px !important;
   }
   
@@ -1723,4 +1702,3 @@ div.config_btn-next button:hover {
     min-height: 48px !important;
   }
 }
-/*test*/
